@@ -9,8 +9,8 @@ def generate_key():
     key = Fernet.generate_key()
     with open('secret_key.key', 'wb') as f:
         f.write(key)
-    # repr is used to hide the b' prefix and ' suffix
     print(f'Encryption Key: {repr(key)[2:-1]}')
+    print('WARNING: Only recently generated key is stored in the file.')
 
 
 def load_key():
